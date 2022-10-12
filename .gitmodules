@@ -1,0 +1,19 @@
+[submodule "projects/shell"]
+	path = projects/shell
+	url = git@github.com:JRiyaz/angular_mfe_shell.git
+	branch = main
+
+[submodule "projects/user"]
+	path = projects/user
+	url = git@github.com:JRiyaz/angular_mfe_user.git
+	branch = main
+
+[submodule "projects/inventory"]
+	path = projects/inventory
+	url = git@github.com:JRiyaz/angular_mfe_inventory.git
+	branch = main
+
+[submodule "projects/flight"]
+	path = projects/flight
+	url = git@github.com:JRiyaz/angular_mfe_flight.git
+	branch = main
