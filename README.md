@@ -136,3 +136,39 @@ cd ../..
 
 8. ng generate module app --routing --flat (--flat does not create folder, --routing with router file)
 9. ng g c foo --module app --project shell (OR) ng g c app/foo --project shell (inside app module)
+
+
+SUB-MODULES:
+
+1. Clone submodules
+	git clone --recurse-submodules <ssh or https>
+	EX: git clone --recurse-submodules git@git.zeomega.com:jiva-platform/ui_monorepo.git
+	(OR)
+	git clone git@git.zeomega.com:jiva-platform/ui_monorepo.git
+	git submodule update --init --recursive 
+
+2. Execute some command in submodule
+	git submodule foreach '<git-command>'
+	git submodule foreach 'git checkout develop'
+
+3. Recursive pull all submodules
+	git submodule foreach 'git pull || :'
+
+4. Check branch or log or status of submodule
+	git -C <path> <command>
+	EX: git -C projects/correspondence/ branch
+
+5. Add a submodule
+	cd projects/sre
+	git init
+	git remote add origin git@git.zeomega.com:jiva-platform/jivasvc.sre.log.git
+	(OR)
+	git submodule add <URL> <path>
+	EX: git submodule add --name sre git@git.zeomega.com:jiva-platform/jivasvc.sre.log.git projects/sre
+
+6. Get to know the code | see file and folder structure
+	git grep foo
+	git ls-files --recurse-submodules
+
+7. Know the status
+	git submodule status --recurse-submodules
